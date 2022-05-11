@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: rgb(255, 88, 93);
+  padding: 20px;
+  height: 20vh;
+}
+
+.header h1 {
+  color: white;
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.main {
+  background-color: rgb(255, 88, 93);
+  padding: 20px;
+  color: white;
+  line-height: 30px;
+}
+
+.main ul {
+  padding-left: 20px;
+}
+
+.footer {
+  background-color: rgb(255, 88, 93);
+  text-align: center;
+  padding: 20px 0;
+  height: 15vh;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.img {
+  width: 400px;
+  height: 250px;
+}

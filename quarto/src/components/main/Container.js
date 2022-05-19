@@ -8,6 +8,14 @@ export default function Container(){
     //vamos o estado inicial dos produtos, ou seja,
     //quais dados existem dentro do objeto produtos
 
+    const [mensagem,setMensagem] = useState([
+        {
+            titulo: "",
+            autor: "",
+            mensagem: ""
+        }
+    ])
+
     const[produtos,setProdutos] = useState([
         {
             id:"",
@@ -15,8 +23,8 @@ export default function Container(){
             descricao: "",
             categoria: "",
             preco: "",
-            msg: []
-        }
+            msg: [],
+        },
     ]);
 
     useEffect(()=>{
@@ -30,10 +38,14 @@ export default function Container(){
 
     },[])
 
+    const mudarDados = (content)=>{
+        setMensagem(content);
+    }
+
     return(
         <div className="container">
-            <Mensagem />
-            <Conteudo dados = {produtos}/>
+            <Mensagem info = {mensagem}/>
+            <Conteudo dados = {produtos} acao = {mudarDados} />
         </div>
     )
 }
